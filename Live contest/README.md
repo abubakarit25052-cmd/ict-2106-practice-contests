@@ -70,54 +70,54 @@ The locked code in the editor will determine how many scores are larger than Kri
 #include <iostream>
 using namespace std;
 
-class Student {
+class student
+{
 private:
-    int scores[5];
+    int score[9];
 
 public:
-    void input() {
-        for (int i = 0; i < 5; i++) {
-            cin >> scores[i];
+    void input()
+    {
+        for (int i = 0; i < 5; i++)
+        {
+            cin >> score[i];
         }
     }
-
-    int calculateTotalScore() {
+    int total()
+    {
         int sum = 0;
-
-        for (int i = 0; i < 5; i++) {
-            sum += scores[i];
+        for (int i = 0; i < 5; i++)
+        {
+            sum += score[i];
         }
-
         return sum;
     }
 };
 
-int main() {
+int main()
+{
+
     int n;
     cin >> n;
 
-    Student students[1000];
-    int total[1000];
+    student s[1000];
+    int total_score[1000];
+    for (int i = 0; i < n; i++)
+    {
+        s[i].input();
+        total_score[i] = s[i].total();
 
-    for (int i = 0; i < n; i++) {
-        students[i].input();
-        total[i] = students[i].calculateTotalScore();
     }
-
-    int kristen = total[0];
     int count = 0;
-
-    for (int i = 1; i < n; i++) {
-        if (total[i] > kristen) {
+    for (int i = 0; i < n; i++)
+    {
+        if (total_score[i] > total_score[0])
             count++;
-        }
     }
-
-    cout << count << endl;
-
+    cout << count << "\n";
     return 0;
 }
-```
+
 
 ## Results
 
