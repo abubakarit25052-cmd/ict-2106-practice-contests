@@ -7,7 +7,7 @@ Session: 2024-2025
 
 **Supervised by:**  
 Dr. Ziaur Rahman  
-Associate Professor  
+Professor  
 Department of ICT, MBSTU  
 
 ---
